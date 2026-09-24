@@ -1,0 +1,23 @@
+.service {
+  gap: 12px;
+}
+
+.service__n {
+  color: var(--muted-2);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.service__title {
+  font-size: 1.1875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.service__text {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}

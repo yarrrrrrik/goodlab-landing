@@ -1,0 +1,33 @@
+.process__list {
+  counter-reset: step;
+}
+
+.process__step {
+  position: relative;
+  gap: 10px;
+  padding-top: 22px;
+}
+
+.process__n {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  color: var(--muted-2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.process__title {
+  margin-top: 4px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+
+.process__text {
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.58;
+}

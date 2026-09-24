@@ -1,0 +1,138 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: hsla(40, 20%, 97%, 0.72);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--ease), background var(--ease);
+}
+
+.header--scrolled {
+  border-bottom-color: var(--border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 14px var(--pad-x);
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.header__mark {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  background: var(--ink);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.header__mark::after {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  background: var(--bg-warm);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-left: auto;
+}
+
+.header__nav > a {
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color var(--ease);
+}
+
+.header__nav > a:hover {
+  color: var(--ink);
+}
+
+.header__burger {
+  display: none;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header__burger-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 20px;
+  height: 14px;
+}
+
+.header__burger-box i {
+  display: block;
+  height: 1.5px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform var(--ease);
+}
+
+.header__burger-box.is-open i:first-child {
+  transform: translateY(3.25px) rotate(45deg);
+}
+
+.header__burger-box.is-open i:last-child {
+  transform: translateY(-3.25px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .header__inner {
+    gap: 12px;
+  }
+
+  .header__burger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .header__nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    margin: 0;
+    padding: 12px var(--pad-x) 20px;
+    background: var(--bg-warm);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header__nav--open {
+    display: flex;
+  }
+
+  .header__nav > a {
+    padding: 10px 0;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+}
